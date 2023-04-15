@@ -15,6 +15,7 @@ public class ScheduledTasks {
     public ScheduledTasks(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
+
     @Scheduled(cron = "* * * * * *")
     public void doTask() {
         String sql = "INSERT INTO first.tutorial_tbl(tutorial_title, tutorial_author, submission_date) " +
