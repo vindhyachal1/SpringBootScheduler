@@ -19,7 +19,10 @@ public class ScheduledTasks {
     @Scheduled(cron = "* * * * * *")
     public void doTask() {
         String sql = "INSERT INTO first.tutorial_tbl(tutorial_title, tutorial_author, submission_date) " +
-                "VALUES('Title2', 'T', '2008-11-12')";
+                "VALUES('Title4', 'C', '2008-11-12')";
+        String sql1 = "INSERT INTO first.tutorial_tbl(tutorial_title, tutorial_author, submission_date) " +
+                "VALUES('Title5', 'D', '2008-11-12')";
         jdbcTemplate.update(sql);
+        jdbcTemplate.update(sql1);
     }
 }
