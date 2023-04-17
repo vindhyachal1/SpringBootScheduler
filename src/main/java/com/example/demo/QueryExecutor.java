@@ -21,7 +21,7 @@ public class QueryExecutor {
 
         // loop through the list of queries and execute each one with the formatted date as a parameter
         for (String sql : sqlQueries) {
-            jdbcTemplate.update(sql, formattedDate);
+            jdbcTemplate.update(sql);
         }
     }
 }
